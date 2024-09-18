@@ -1,4 +1,4 @@
-package br.com.springmvc.conf;
+package br.com.springmvc.loja.conf;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -11,7 +11,7 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
     protected Class<?>[] getServletConfigClasses() {
 // Tem que colocar aqui para ser adicionado no
 //carregamento da servlet base
-        return new Class[]{AppWebConfiguration.class};
+        return new Class[]{AppWebConfiguration.class, JPAConfiguration.class};
     }
     @Override
     protected String[] getServletMappings() {
